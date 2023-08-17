@@ -29,6 +29,7 @@ use('wbthomason/packer.nvim')
 -- One Dark theme.
 use({
     'jessarcher/onedark.nvim',
+    -- 'rose-pine/neovim',
     config = function()
         vim.cmd('colorscheme onedark')
 
