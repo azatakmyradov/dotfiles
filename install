@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+DOTFILES=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+
+rm -rf $HOME/.config/nvim
+ln -s $DOTFILES/nvim $HOME/.config/nvim
+
+# vscode
+rm -rf $HOME/Library/Application\ Support/Code/Snippets
+rm -rf $HOME/Library/Application\ Support/Code/settings.json
+rm -rf $HOME/Library/Application\ Support/Code/keybindings.json
+ln -s $DOTFILES/vscode/snippets $HOME/Library/Application\ Support/Code/Snippets
+ln -s $DOTFILES/vscode/settings.json $HOME/Library/Application\ Support/Code/settings.json
+ln -s $DOTFILES/vscode/keybindings.json $HOME/Library/Application\ Support/Code/keybindings.json
+
+rm -rf $HOME/.zshrc
+rm -rf $HOME/.zsh_aliases
+ln -s $DOTFILES/.zshrc $HOME/.zshrc
+ln -s $DOTFILES/.zsh_aliases $HOME/.zsh_aliases
+
+rm -rf $HOME/.hushlogin
+ln -s $DOTFILES/.hushlogin $HOME/.hushlogin
+
+rm -rf $HOME/.config/phpactor
+ln -s $DOTFILES/phpactor $HOME/.config/phpactor

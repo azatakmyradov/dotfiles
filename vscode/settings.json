@@ -1,0 +1,68 @@
+{
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/bower_components": true,
+		"**/*.code-search": true,
+		"**/.docker": true,
+	},
+	"explorer.openEditors.visible": 0,
+    "editor.fontSize": 16,
+    "editor.lineHeight": 2.2,
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "Operator Mono, Victor Mono, Menlo, Monaco, 'Courier New', monospace",
+    "editor.tabCompletion": "on",
+    "emmet.triggerExpansionOnTab": true,
+    "workbench.editor.showTabs": false,
+    "editor.inlineSuggest.enabled": true,
+	"workbench.iconTheme": "material-icon-theme",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+	"[dart]": {
+		"editor.defaultFormatter": "Dart-Code.dart-code",
+		"editor.formatOnSave": true,
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false
+	},
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"breadcrumbs.enabled": false,
+	"breadcrumbs.filePath": "off",
+	"breadcrumbs.icons": false,
+	"breadcrumbs.symbolPath": "off",
+	"workbench.layoutControl.enabled": false,
+	"window.titleBarStyle": "custom",
+	"dart.debugExternalPackageLibraries": false,
+	"dart.debugSdkLibraries": false,
+	"[php]": {
+		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+	},
+	"vscode-php-cs-fixer.fixOnSave": false,
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"workbench.activityBar.visible": false,
+	"editor.cursorBlinking": "smooth",
+	"vscode_custom_css.imports": [
+		"file:///Users/azatakmyradov/.vscode/hide-title-bar.css"
+	],
+	"workbench.colorTheme": "One Dark Pro",
+	"editor.scrollbar.verticalScrollbarSize": 0,
+	"editor.renderLineHighlight": "none",
+	"window.commandCenter": false,
+	"window.zoomLevel": 1,
+	"security.workspace.trust.untrustedFiles": "open"
+}
