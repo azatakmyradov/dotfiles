@@ -299,6 +299,15 @@ use({
 -- Emmet for Vim
 use('mattn/emmet-vim')
 
+-- Flutter plugin
+use {
+    'akinsho/flutter-tools.nvim',
+    requires = {
+        'nvim-lua/plenary.nvim',
+        'stevearc/dressing.nvim', -- optional for vim.ui.select
+    },
+}
+
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
 if packer_bootstrap then
