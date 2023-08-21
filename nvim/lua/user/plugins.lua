@@ -28,10 +28,11 @@ use('wbthomason/packer.nvim')
 
 -- One Dark theme.
 use({
-    'jessarcher/onedark.nvim',
+    -- 'jessarcher/onedark.nvim',
+    'haishanh/night-owl.vim',
     -- 'rose-pine/neovim',
     config = function()
-        vim.cmd('colorscheme onedark')
+        vim.cmd('colorscheme night-owl')
 
         vim.api.nvim_set_hl(0, 'FloatBorder', {
             fg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
@@ -51,7 +52,8 @@ use({
             bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
         })
 
-        vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#2F313C' })
+        vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#021F3A' })
+        -- vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#2F313C' })
     end,
 })
 
@@ -307,14 +309,6 @@ use {
         'stevearc/dressing.nvim', -- optional for vim.ui.select
     },
 }
-
--- GitHub Copilot
-use({
-    'github/copilot.vim',
-    config = function ()
-        require('user/plugins/copilot')
-    end
-})
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
