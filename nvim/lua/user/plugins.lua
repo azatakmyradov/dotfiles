@@ -309,7 +309,12 @@ use {
 }
 
 -- GitHub Copilot
-use('github/copilot.vim')
+use({
+    'github/copilot.vim',
+    config = function ()
+        require('user/plugins/copilot')
+    end
+})
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
