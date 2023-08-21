@@ -52,8 +52,8 @@ use({
             bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
         })
 
-        vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#021F3A' })
-        -- vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#2F313C' })
+        vim.api.nvim_set_hl(0, 'indentblanklinechar', { fg = '#021f3a' })
+        -- vim.api.nvim_set_hl(0, 'indentblanklinechar', { fg = '#2f313c' })
     end,
 })
 
@@ -73,7 +73,7 @@ use('tpope/vim-eunuch')
 use('tpope/vim-repeat')
 
 -- Add more languages.
-use('sheerun/vim-polyglot')
+-- use('sheerun/vim-polyglot')
 
 -- Jump to the last location when opening a file.
 use('farmergreg/vim-lastplace')
