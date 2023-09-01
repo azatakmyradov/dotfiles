@@ -65,3 +65,7 @@ vim.keymap.set('n', '<a-j>', ':move .+1<cr>==')
 vim.keymap.set('n', '<A-k>', ':move .-2<CR>==')
 vim.keymap.set('v', '<A-j>', ":move '>+1<CR>gv=gv")
 vim.keymap.set('v', '<A-k>', ":move '<-2<CR>gv=gv")
+
+vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("v", "<leader>v", "\"+y")
+vim.keymap.set("n", "<leader>Y", "\"+Y")

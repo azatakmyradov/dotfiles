@@ -67,7 +67,7 @@ use('tpope/vim-surround')
 use('tpope/vim-eunuch')
 
 -- Indent autodetection with editorconfig support.
--- use('tpope/vim-sleuth')
+use('tpope/vim-sleuth')
 
 -- Allow plugins to enable repeating of commands.
 use('tpope/vim-repeat')
@@ -309,6 +309,25 @@ use {
         'stevearc/dressing.nvim', -- optional for vim.ui.select
     },
 }
+
+-- Prisma Syntax highlight
+use('prisma/vim-prisma')
+
+-- Prettier
+use('neovim/nvim-lspconfig')
+use({
+    'jose-elias-alvarez/null-ls.nvim',
+    config = function ()
+        require('user/plugins/lull-ls')
+    end
+})
+
+use({
+    'MunifTanjim/prettier.nvim',
+    config = function ()
+        require('user/plugins/prettier')
+    end
+})
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
