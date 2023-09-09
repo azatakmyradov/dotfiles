@@ -4,7 +4,6 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
     'tsserver',
-    'rust_analyzer',
 })
 
 -- Fix Undefined global 'vim'
@@ -55,5 +54,5 @@ end)
 lsp.setup()
 
 vim.diagnostic.config({
-    virtual_text = false,
+    virtual_text = true,
 })

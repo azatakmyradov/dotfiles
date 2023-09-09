@@ -3,13 +3,11 @@ require('indent_blankline').setup({
         'help',
         'terminal',
         'dashboard',
-        'packer',
         'lspinfo',
         'TelescopePrompt',
         'TelescopeResults',
     },
     buftype_exclude = {
         'terminal',
-        'NvimTree',
     },
 })
