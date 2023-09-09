@@ -17,6 +17,9 @@ require("lazy").setup({
         "folke/tokyonight.nvim",
         lazy = false, -- make sure we load this during startup if it is your main colorscheme
         priority = 1000, -- make sure to load this before all the other start plugins
+        opts = {
+            style = "moon"
+        },
         config = function()
             -- load the colorscheme here
             vim.cmd([[colorscheme tokyonight]])
@@ -75,11 +78,8 @@ require("lazy").setup({
     -- Automatically set the working directory to the project root.
     {
         'airblade/vim-rooter',
-        setup = function()
-            -- Instead of this running every time we open a file, we'll just run it once when Vim starts.
-            vim.g.rooter_manual_only = 1
-        end,
         config = function()
+            vim.g.rooter_manual_only = 1
             vim.cmd('Rooter')
         end,
     },
