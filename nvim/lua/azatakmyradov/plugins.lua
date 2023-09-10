@@ -183,7 +183,23 @@ require("lazy").setup({
         end,
     },
 
+    -- Emmet for VIM
     { 'mattn/emmet-vim' },
+
+    -- Prettier
+    { 'neovim/nvim-lspconfig' },
+    {
+        'jose-elias-alvarez/null-ls.nvim',
+        config = function ()
+            require('azatakmyradov/plugins/null-ls')
+        end
+    },
+    {
+        'MunifTanjim/prettier.nvim',
+        config = function ()
+            require('azatakmyradov/plugins/prettier')
+        end
+    }
 }, {
 
 })
