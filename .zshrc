@@ -144,3 +144,10 @@ export HERD_PHP_74_INI_SCAN_DIR="/Users/azatakmyradov/Library/Application Suppor
 HOME=${HOME:-'/Users/azatakmyradov'}
 export PATH="$HOME/"'.platformsh/bin':"$PATH"
 if [ -f "$HOME/"'.platformsh/shell-config.rc' ]; then . "$HOME/"'.platformsh/shell-config.rc'; fi # END SNIPPET
+
+# bun completions
+[ -s "/Users/azatakmyradov/.bun/_bun" ] && source "/Users/azatakmyradov/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
