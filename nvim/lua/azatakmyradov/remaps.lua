@@ -26,9 +26,9 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/azatakmyradov/packer.lua<CR>");
 
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
+-- vim.keymap.set("n", "<leader><leader>", function()
+--     vim.cmd("so")
+-- end)
 
 -- When text is wrapped, move by terminal rows, not lines, unless a count is provided.
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true })
