@@ -75,3 +75,15 @@ vim.keymap.set('n', '<leader>G', [[<cmd>lua require('telescope').extensions.live
 vim.keymap.set('n', '<leader>h', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]])
 vim.keymap.set('n', '<leader>s', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]])
 
+-- Harpoon
+local mark = require('harpoon.mark')
+local ui = require('harpoon.ui')
+
+vim.keymap.set("n", "<leader>a", mark.add_file, { noremap = true, silent = true })
+vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu, { noremap = true, silent = true })
+
+vim.keymap.set('n', '<leader>s', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]])
+vim.keymap.set("n", "<C-h>", [[<cmd>lua require('harpoon.ui').nav_file(1)<CR>]])
+vim.keymap.set("n", "<C-t>", [[<cmd>lua require('harpoon.ui').nav_file(2)<CR>]])
+vim.keymap.set("n", "<C-n>", [[<cmd>lua require('harpoon.ui').nav_file(3)<CR>]])
+vim.keymap.set("n", "<C-s>", [[<cmd>lua require('harpoon.ui').nav_file(4)<CR>]])

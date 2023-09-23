@@ -200,6 +200,8 @@ require("lazy").setup({
             require('azatakmyradov/plugins/prettier')
         end
     },
+
+    -- GitHub Copilot
     {
         'github/copilot.vim',
 
@@ -209,7 +211,10 @@ require("lazy").setup({
             vim.api.nvim_set_keymap("i", "<C-;>", 'copilot#Previous()', { silent = true, expr = true })
             vim.api.nvim_set_keymap("i", "<C-'>", 'copilot#Next()', { silent = true, expr = true })
         end
-    }
+    },
+
+    -- Harpoon
+    { 'ThePrimeagen/harpoon' }
 }, {
 
 })
