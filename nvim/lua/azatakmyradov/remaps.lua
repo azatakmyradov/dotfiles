@@ -87,3 +87,6 @@ vim.keymap.set("n", "<C-h>", [[<cmd>lua require('harpoon.ui').nav_file(1)<CR>]])
 vim.keymap.set("n", "<C-t>", [[<cmd>lua require('harpoon.ui').nav_file(2)<CR>]])
 vim.keymap.set("n", "<C-n>", [[<cmd>lua require('harpoon.ui').nav_file(3)<CR>]])
 vim.keymap.set("n", "<C-s>", [[<cmd>lua require('harpoon.ui').nav_file(4)<CR>]])
+
+-- UndoTree
+vim.keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")

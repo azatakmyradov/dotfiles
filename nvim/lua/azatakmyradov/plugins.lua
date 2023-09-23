@@ -214,7 +214,10 @@ require("lazy").setup({
     },
 
     -- Harpoon
-    { 'ThePrimeagen/harpoon' }
+    { 'ThePrimeagen/harpoon' },
+
+    -- UndoTree
+    { 'mbbill/undotree' }
 }, {
 
 })
