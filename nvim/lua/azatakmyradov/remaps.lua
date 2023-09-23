@@ -15,8 +15,27 @@ vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
+-- keeps search terms in the middle of the screen
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
+-- keep paste buffer after pasting
+vim.keymap.set("x", "<leader>p", "\"_dP")
+
+-- copy to system clipboard
+vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>Y", "\"+Y")
+
+-- Delete to system clipboard
+vim.keymap.set("n", "<leader>d", "\"+d")
+vim.keymap.set("v", "<leader>d", "\"+d")
+
 -- switch to normal mode
 vim.keymap.set("i", "<C-c>", "<Esc>")
+
+-- Disable Ex mode
+vim.keymap.set("n", "Q", "<Nop>")
 
 -- search and replace current word
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -24,7 +43,7 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- make current file executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/azatakmyradov/packer.lua<CR>");
+vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/azatakmyradov/plugins.lua<CR>");
 
 -- vim.keymap.set("n", "<leader><leader>", function()
 --     vim.cmd("so")
