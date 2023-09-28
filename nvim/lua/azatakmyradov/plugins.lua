@@ -14,15 +14,18 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     -- the colorscheme should be available when starting Neovim
     {
-        "folke/tokyonight.nvim",
+        -- "folke/tokyonight.nvim",
+        "oxfist/night-owl.nvim",
         lazy = false, -- make sure we load this during startup if it is your main colorscheme
         priority = 1000, -- make sure to load this before all the other start plugins
         opts = {
-            style = "moon"
+            -- style = "moon"
+            theme = "night-owl"
         },
         config = function()
             -- load the colorscheme here
-            vim.cmd([[colorscheme tokyonight]])
+            -- vim.cmd([[colorscheme tokyonight]])
+            vim.cmd.colorscheme("night-owl")
             require('azatakmyradov/plugins/colorscheme')
         end,
     },
