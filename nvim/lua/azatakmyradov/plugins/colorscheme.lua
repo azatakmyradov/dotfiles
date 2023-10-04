@@ -9,15 +9,7 @@ vim.api.nvim_set_hl(0, 'CursorLineBg', {
     bg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
 })
 
-vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#021629' })
+vim.api.nvim_set_hl(0, 'StatusLine', { bg ='#202532' });
+vim.api.nvim_set_hl(0, 'StatusLineNC', { bg ='#202532' });
 
--- vim.api.nvim_set_hl(0, 'StatusLineNonText', {
---     fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
---     bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
--- })
-
-vim.api.nvim_set_hl(0, 'StatusLine', { bg ='#021629' });
-vim.api.nvim_set_hl(0, 'NonText', { bg ='#021629' });
-vim.api.nvim_set_hl(0, 'StatusLineNonText', { bg ='#021629' });
-
-vim.api.nvim_set_hl(0, 'indentblanklinechar', { fg = '#021D37' })
+vim.api.nvim_set_hl(0, 'indentblanklinechar', { fg = '#2E2F43' })
