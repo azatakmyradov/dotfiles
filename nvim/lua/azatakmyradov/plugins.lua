@@ -116,14 +116,6 @@ require("lazy").setup({
     -- Git commands.
     { 'tpope/vim-fugitive', },
 
-    -- Display indentation lines.
-    {
-        'lukas-reineke/indent-blankline.nvim',
-        config = function()
-            require('azatakmyradov/plugins/indent-blankline')
-        end,
-    },
-
     -- Improved syntax highlighting
     {
         'nvim-treesitter/nvim-treesitter',
