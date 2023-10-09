@@ -31,7 +31,6 @@ require("lazy").setup({
         priority = 1000,
         dependencies = {
             'nvim-lua/plenary.nvim',
-            'kyazdani42/nvim-web-devicons',
             'nvim-telescope/telescope-live-grep-args.nvim',
             { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
         },
