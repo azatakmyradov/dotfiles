@@ -28,7 +28,7 @@ require("lazy").setup({
     {
         'nvim-telescope/telescope.nvim',
         lazy = false,
-        priority = 1000,
+        priority = 1,
         dependencies = {
             'nvim-lua/plenary.nvim',
             'nvim-telescope/telescope-live-grep-args.nvim',
