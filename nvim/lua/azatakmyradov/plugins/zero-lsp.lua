@@ -2,6 +2,8 @@ local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
+require('mason').setup()
+
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
