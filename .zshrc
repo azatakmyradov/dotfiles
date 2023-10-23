@@ -151,3 +151,4 @@ if [ -f "$HOME/"'.platformsh/shell-config.rc' ]; then . "$HOME/"'.platformsh/she
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
