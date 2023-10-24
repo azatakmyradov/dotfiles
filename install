@@ -5,6 +5,9 @@ DOTFILES=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim
 
+rm -rf $HOME/.config/kitty
+ln -s $DOTFILES/kitty $HOME/.config
+
 rm -rf $HOME/.zshrc
 rm -rf $HOME/.zsh_aliases
 ln -s $DOTFILES/.zshrc $HOME/.zshrc

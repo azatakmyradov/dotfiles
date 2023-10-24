@@ -1,0 +1,13 @@
+font_family MonoLisa Book
+bold_font MonoLisa Bold
+italic_font MonoLisa Italic
+bold_italic_font MonoLisa Bold Italic
+
+font_size 15
+adjust_line_height 175%
+
+cursor_blink_interval 0 
+enable_audio_bell 0
+hide_window_decorations yes
+background #252837
+window_padding_width 10
