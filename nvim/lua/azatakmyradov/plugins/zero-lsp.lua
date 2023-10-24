@@ -1,37 +1,8 @@
-local lsp = require("lsp-zero")
+local lsp_zero = require('lsp-zero')
 
-lsp.preset("recommended")
+lsp_zero.on_attach(function(client, bufnr)
+    lsp_zero.default_keymaps({buffer = bufnr})
 
-require('mason').setup()
-
-local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
-local cmp_select = {behavior = cmp.SelectBehavior.Select}
-local cmp_mappings = lsp.defaults.cmp_mappings({
-    ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-    ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-    ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-    ["<C-Space>"] = cmp.mapping.complete(),
-})
-
-cmp.setup({
-    mapping = cmp.mapping.preset.insert({
-        ['<Tab>'] = cmp_action.tab_complete(),
-        ['<S-Tab>'] = cmp_action.select_prev_or_fallback(),
-    })
-})
-
-lsp.set_preferences({
-    suggest_lsp_servers = false,
-    sign_icons = {
-        error = 'E',
-        warn = 'W',
-        hint = 'H',
-        info = 'I'
-    }
-})
-
-lsp.on_attach(function(client, bufnr)
     local opts = {buffer = bufnr, remap = false}
 
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
@@ -46,8 +17,11 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-lsp.setup()
-
-vim.diagnostic.config({
-    virtual_text = true,
+require('mason').setup({})
+require('mason-lspconfig').setup({
+    ensure_installed = {},
+    handlers = {
+        lsp_zero.default_setup,
+    },
 })
+
