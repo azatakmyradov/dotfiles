@@ -15,7 +15,7 @@ require("lazy").setup({
     -- the colorscheme should be available when starting Neovim
     {
         'JoosepAlviste/palenightfall.nvim',
-        lazy = false, -- make sure we load this during startup if it is your main colorscheme
+        lazy = false,    -- make sure we load this during startup if it is your main colorscheme
         priority = 1000, -- make sure to load this before all the other start plugins
         config = function()
             -- load the colorscheme here
@@ -126,6 +126,9 @@ require("lazy").setup({
             require('nvim-treesitter.install').update({ with_sync = true })
         end,
         config = function()
+            require('ts_context_commentstring').setup {
+                enable_autocmd = false,
+            }
             require('azatakmyradov/plugins/treesitter')
         end,
     },
@@ -151,9 +154,9 @@ require("lazy").setup({
     {
         'VonHeikemen/lsp-zero.nvim',
         dependencies = {
-            {'neovim/nvim-lspconfig'},             -- Required
-            {'williamboman/mason.nvim'},           -- Optional
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            { 'neovim/nvim-lspconfig' },           -- Required
+            { 'williamboman/mason.nvim' },         -- Optional
+            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
         },
         config = function()
             require('azatakmyradov/plugins/zero-lsp')
@@ -178,13 +181,13 @@ require("lazy").setup({
     { 'neovim/nvim-lspconfig' },
     {
         'jose-elias-alvarez/null-ls.nvim',
-        config = function ()
+        config = function()
             require('azatakmyradov/plugins/null-ls')
         end
     },
     {
         'MunifTanjim/prettier.nvim',
-        config = function ()
+        config = function()
             require('azatakmyradov/plugins/prettier')
         end
     },
@@ -193,7 +196,7 @@ require("lazy").setup({
     {
         'github/copilot.vim',
 
-        config = function ()
+        config = function()
             vim.g.copilot_no_tab_map = true
             vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
             vim.api.nvim_set_keymap("i", "<C-;>", 'copilot#Previous()', { silent = true, expr = true })
