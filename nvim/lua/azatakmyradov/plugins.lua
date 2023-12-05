@@ -154,8 +154,8 @@ require("lazy").setup({
     {
         'VonHeikemen/lsp-zero.nvim',
         dependencies = {
-            { 'neovim/nvim-lspconfig' },           -- Required
-            { 'williamboman/mason.nvim' },         -- Optional
+            { 'neovim/nvim-lspconfig' },             -- Required
+            { 'williamboman/mason.nvim' },           -- Optional
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
         },
         config = function()
@@ -208,7 +208,27 @@ require("lazy").setup({
     { 'ThePrimeagen/harpoon' },
 
     -- UndoTree
-    { 'mbbill/undotree' }
+    { 'mbbill/undotree' },
+
+    -- Lua Line
+    {
+        'nvim-lualine/lualine.nvim',
+        lazy = false,    -- make sure we load this during startup if it is your main colorscheme
+        priority = 1000, -- make sure to load this before all the other start plugins
+        config = function()
+            -- load the colorscheme here
+            require('lualine').setup {
+                sections = {
+                    lualine_a = { 'mode' },
+                    lualine_b = { 'branch', 'diff', 'diagnostics' },
+                    lualine_c = { 'filename' },
+                    lualine_x = { 'encoding', 'fileformat', 'filetype' },
+                    lualine_y = { 'progress' },
+                    lualine_z = { 'location' }
+                },
+            }
+        end,
+    }
 }, {
 
 })
