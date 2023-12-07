@@ -19,6 +19,9 @@ require("lazy").setup({
         priority = 1000, -- make sure to load this before all the other start plugins
         config = function()
             -- load the colorscheme here
+            require('rose-pine').setup({
+                disable_italics = true,
+            })
             vim.cmd.colorscheme("rose-pine")
             require('azatakmyradov/plugins/colorscheme')
         end,
