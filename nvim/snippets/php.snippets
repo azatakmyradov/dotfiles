@@ -4,6 +4,12 @@ snippet met "public method"
 		${0}
 	}
 
+snippet _c "constructor"
+	public function __construct(${1})
+	{
+		${2}
+	}
+
 snippet pmet "protected method"
 	protected function ${1}(${2}): $3
 	{
@@ -28,3 +34,6 @@ snippet testa "test method (annotation)"
 	{
 		${0}
 	}
+
+snippet rt "Route"
+	Route::${1}('/${2}', [${3}, '$4']);

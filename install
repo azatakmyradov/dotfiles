@@ -5,13 +5,13 @@ DOTFILES=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim
 
-# vscode
-rm -rf $HOME/Library/Application\ Support/Code/User/Snippets
-rm -rf $HOME/Library/Application\ Support/Code/User/settings.json
-rm -rf $HOME/Library/Application\ Support/Code/User/keybindings.json
-ln -s $DOTFILES/vscode/snippets $HOME/Library/Application\ Support/Code/User/Snippets
-ln -s $DOTFILES/vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
-ln -s $DOTFILES/vscode/keybindings.json $HOME/Library/Application\ Support/User/Code/keybindings.json
+# Kitty terminal
+rm -rf $HOME/.config/kitty
+ln -s $DOTFILES/kitty $HOME/.config
+
+# Tmux
+rm -rf $HOME/.tmux.conf
+ln -s $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
 
 rm -rf $HOME/.zshrc
 rm -rf $HOME/.zsh_aliases

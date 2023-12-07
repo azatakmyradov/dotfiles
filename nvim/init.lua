@@ -1,3 +1,3 @@
-require('user/plugins')
-require('user/options')
-require('user/keymaps')
+require('azatakmyradov/plugins')
+require('azatakmyradov/options')
+require('azatakmyradov/remaps')

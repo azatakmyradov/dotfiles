@@ -34,3 +34,7 @@ alias sshakmyradov="ssh root@167.99.157.85"
 
 # vim
 alias vim=nvim
+alias vi=nvim
+
+# helpful
+alias getip="ifconfig | grep \"inet\""
