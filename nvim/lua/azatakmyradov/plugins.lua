@@ -231,7 +231,15 @@ require("lazy").setup({
                 },
             }
         end,
-    }
+    },
+
+    -- Auto tag rename
+    {
+        'windwp/nvim-ts-autotag',
+        config = function()
+            require('nvim-ts-autotag').setup()
+        end
+    },
 }, {
 
 })
