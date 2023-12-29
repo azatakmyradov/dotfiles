@@ -125,9 +125,10 @@ require("lazy").setup({
             'JoosepAlviste/nvim-ts-context-commentstring',
             'nvim-treesitter/nvim-treesitter-textobjects',
         },
-        build = function()
+        run = function ()
             require('nvim-treesitter.install').update({ with_sync = true })
         end,
+        build = ":TSUpdate",
         config = function()
             require('ts_context_commentstring').setup {
                 enable_autocmd = false,
