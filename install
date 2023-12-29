@@ -27,3 +27,7 @@ ln -s $DOTFILES/.hushlogin $HOME/.hushlogin
 # remove default phpactor config
 rm -rf $HOME/.config/phpactor
 ln -s $DOTFILES/phpactor $HOME/.config/phpactor
+
+# Install ZSH auto suggestions
+rm -rf $HOME/.oh-my-zsh/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/plugins/zsh-autosuggestions
