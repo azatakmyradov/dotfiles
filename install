@@ -8,7 +8,7 @@ ln -s $DOTFILES/nvim $HOME/.config/nvim
 
 # Kitty terminal
 rm -rf $HOME/.config/kitty
-ln -s $DOTFILES/kitty $HOME/.config
+ln -s $DOTFILES/kitty $HOME/.config/kitty
 
 # Tmux
 rm -rf $HOME/.tmux.conf
