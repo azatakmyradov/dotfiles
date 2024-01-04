@@ -23,3 +23,5 @@ ln -s $DOTFILES/.hushlogin $HOME/.hushlogin
 
 rm -rf $HOME/.config/phpactor
 ln -s $DOTFILES/phpactor $HOME/.config/phpactor
+
+sudo cp scripts/tmux-sessionizer /usr/local/bin/

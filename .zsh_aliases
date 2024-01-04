@@ -9,6 +9,7 @@ alias pat="php artisan test"
 alias tfs="php artisan test && php artisan migrate:fresh --seed"
 alias sf="php bin/console"
 # alias docker_clean="docker stop $(docker ps -aq) && docker rm $(docker ps -aq) && docker rmi $(docker images -aq)"
+alias f="tmux-sessionizer"
 
 alias wstorm="open -na \"WebStorm.app\""
 
